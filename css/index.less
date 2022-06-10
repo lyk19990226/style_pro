@@ -1,56 +1,70 @@
-.qr-code {
-  width: 20vw;
-  height:20vw;
-  margin: 100px auto;
-  left: 10px;
-  overflow: hidden;
-}
-.qr-code .content {
-  position: relative;
-  display: flex;
-}
-.qr-code img{
-  position: absolute;
-  width: 20vw;
-  height:20vw;
-}
-.qr-code img:nth-child(1) {
-  z-index: 1;
-}
-.qr-code img:nth-child(2) {
-  animation: qrcodeAnima2 1s ease forwards;
-}
-.qr-code img:nth-child(3){
-  animation: qrcodeAnima3 2s ease forwards;
-}
-.qr-code img:nth-child(4){
-  animation: qrcodeAnima4 3s ease forwards;
+.wrapper {
+  margin: 0 2vw;
 }
 
-@keyframes qrcodeAnima2 {
-  form {
-    z-index: 0;
+
+.qr-code {
+  position: fixed;
+  bottom:10px;
+  right:2vw;
+  width: 35vw;
+  height:44vw;
+  margin: 0 auto;
+
+  text-align: center;
+  background-color: rgba(46, 41, 41, 0.6);
+  color:#fff;
+  .contain {
+    height: 10vw;
+    line-height: 10vw;
+    font-size: 2.6667vw;
   }
-  
-  to {
-    z-index: 2;
+  .content {
+    img{
+      position: absolute;
+      width: 33vw;
+      height:33vw;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+      &:nth-child(1) {
+        z-index: 1;
+      }
+      &:nth-child(2) {
+        animation: qrcodeAnima2 0.5s ease infinite;
+      }
+      @keyframes qrcodeAnima2 {
+        form {
+          z-index: 0;
+        }
+        
+        to {
+          z-index: 2;
+        }
+      }
+    }
   }
 }
-@keyframes qrcodeAnima3 {
-  form {
-    z-index: 0;
+.bili {
+  .desc {
+    font-size: 5.3333vw;
   }
-  
-  to {
-    z-index: 2;
+  .content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    a,.item{
+      display: block;
+      width:30vw;
+      margin-top: 20px;
+      font-size: 2.6667vw;
+      overflow: hidden;
+      color:#000;
+      img {
+        width:30vw;
+      }
+    }
   }
 }
-@keyframes qrcodeAnima4 {
-  form {
-    z-index: 0;
-  }
-  
-  to {
-    z-index: 2;
-  }
-}
+
+
