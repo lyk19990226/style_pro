@@ -3,7 +3,7 @@
 }
 .qr-code {
   position: fixed;
-  bottom: 10px;
+  bottom: 30px;
   right: 2vw;
   width: 35vw;
   height: 44vw;
@@ -40,6 +40,8 @@
   }
 }
 .bili .desc {
+  padding: 0 2vw;
+  background-color: rgba(221, 212, 212, 0.5);
   font-size: 5.3333vw;
 }
 .bili .content {
