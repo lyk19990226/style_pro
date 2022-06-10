@@ -1,0 +1,52 @@
+.qr-code {
+  width: 20vw;
+  height: 20vw;
+  margin: 100px auto;
+  left: 10px;
+  overflow: hidden;
+}
+.qr-code .content {
+  position: relative;
+  display: flex;
+}
+.qr-code img {
+  position: absolute;
+  width: 20vw;
+  height: 20vw;
+}
+.qr-code img:nth-child(1) {
+  z-index: 1;
+}
+.qr-code img:nth-child(2) {
+  animation: qrcodeAnima2 1s ease forwards;
+}
+.qr-code img:nth-child(3) {
+  animation: qrcodeAnima3 2s ease forwards;
+}
+.qr-code img:nth-child(4) {
+  animation: qrcodeAnima4 3s ease forwards;
+}
+@keyframes qrcodeAnima2 {
+  form {
+    z-index: 0;
+  }
+  to {
+    z-index: 2;
+  }
+}
+@keyframes qrcodeAnima3 {
+  form {
+    z-index: 0;
+  }
+  to {
+    z-index: 2;
+  }
+}
+@keyframes qrcodeAnima4 {
+  form {
+    z-index: 0;
+  }
+  to {
+    z-index: 2;
+  }
+}
